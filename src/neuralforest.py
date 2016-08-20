@@ -146,9 +146,9 @@ class ShallowNeuralForest:
 
             if on_epoch is not None:
                 if X_val is None:
-                    on_epoch(epoch, loss)
+                    on_epoch(epoch, loss, self)
                 else:
-                    on_epoch(epoch, loss, tloss, accur)
+                    on_epoch(epoch, loss, tloss, accur, self)
 
         return self
 
